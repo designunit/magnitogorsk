@@ -1,0 +1,23 @@
+{
+  "id": "4f6cf8fd-caba-4dfd-9836-0ddecd926c58",
+  "uid": "voluptas-incidunt-blanditiis",
+  "type": "hero",
+  "data": {
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Nostrud consectetur ut velit cupidatat ullamco cupidatat ipsum officia sint ad deserunt. Nulla mollit anim eu reprehenderit fugiat dolore sit anim amet. Velit est et nulla in magna.",
+        "spans": []
+      }
+    ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+    }
+  }
+}

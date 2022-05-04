@@ -1,0 +1,49 @@
+{
+  "id": "poll",
+  "label": "poll",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "content": {
+        "type": "Text",
+        "config": {
+          "label": "Content",
+          "placeholder": ""
+        }
+      },
+      "forms": {
+        "type": "Group",
+        "config": {
+          "label": "Forms",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            },
+            "src": {
+              "type": "Link",
+              "config": {
+                "label": "Src",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
