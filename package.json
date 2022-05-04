@@ -1,12 +1,13 @@
 {
-  "name": "ulyanovsk-agglomeration",
+  "name": "magnitogorsk",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "sm": "start-slicemachine"
+    "sm": "start-slicemachine",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@prismicio/client": "^6.4.3",
