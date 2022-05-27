@@ -38,9 +38,10 @@
 }
 
 .themePrimary {
-    --color-bg: var(--color-button);
-    --color-text: white;
-    --color-border: white;
+    --color-bg: white;
+    /* var(--color-button); */
+    --color-text: var(--color-button);
+    --color-border: var(--color-button);;
     background: var(--color-bg);
     border: 2px solid var(--color-border);
     color: var(--color-text);

@@ -13,12 +13,8 @@ export type ModalProps = Omit<ReactModal.Props, 'closeTimeoutMS'>
 export const Modal: React.FC<{
     modalIsOpen: boolean
     setModalIsOpen: (isOpen: boolean) => void
-    data: any
-}> = ({ modalIsOpen, setModalIsOpen, data }) => {
+}> = ({ modalIsOpen, setModalIsOpen }) => {
     const delay = 250
-
-    const [state, setState] = useState<null | 1 | 2 | 3 | 4>(null)
-
     return (
         <ReactModal
             isOpen={modalIsOpen}
@@ -31,7 +27,7 @@ export const Modal: React.FC<{
             <>
                 <div className={s.title}>
                     <Title level={3}>
-                        {data.title[0].text}
+                        Опрос
                     </Title>
                     <Button
                         onClick={() => setModalIsOpen(false)}
@@ -55,32 +51,7 @@ export const Modal: React.FC<{
                         />
                     </Button>
                 </div>
-                {state == null ? (
-                    <div className={s.preview}>
-                        <Article>
-                            <Title style={{
-                                textAlign: 'center',
-                                whiteSpace: 'pre-line'
-                            }}>
-                                {data.content}
-                            </Title>
-                        </Article>
-                        <div className={s.buttons}>
-                            {data.forms.map((x, i) => (
-                                <Button
-                                    key={i}
-                                    onClick={() => setState(i as any)}
-                                    theme={'primary'}
-                                    size='big'
-                                >
-                                    {x.name}
-                                </Button>
-                            ))}
-                        </div>
-                    </div>
-                ) : (
-                    <iframe className={s.iframe} src={data.forms[state].src.url} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
-                )}
+                <iframe className={s.iframe} src={'https://docs.google.com/forms/d/e/1FAIpQLSd9oE-O-7KLzW2Nn-0K0yOQFDlzA4P7KzX2uAl3uVCdoRrWUA/viewform?embedded=true'} frameBorder='0' marginHeight={0} marginWidth={0}>Загрузка…</iframe>
             </>
         </ReactModal>
     )

@@ -1,5 +1,5 @@
 .title {
-    font-family: 'PT Serif', serif;
+    font-family: var(--font-family-primary);
     font-weight: bold;
 
     font-style: normal;
@@ -14,8 +14,8 @@
 }
 
 .h1 {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 62px;
+    line-height: 64px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -34,9 +34,9 @@
 
 @media screen and (max-width: 480px) {
     .h1 {
-        font-size: 20px;
-        line-height: 26px;
-        text-align: center;
+        /* font-size: 20px;
+        line-height: 26px; */
+        /* text-align: center; */
     }
     .h2 {
         font-size: 28px;

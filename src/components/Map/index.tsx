@@ -19,9 +19,10 @@ export const Map: React.FC = () => {
             back={(
                 <>
                     <Image
-                        src='/static/map.png'
+                        src='/static/map.jpg'
                         layout='fill'
                         objectFit='cover'
+                        quality={90}
                     />
                 </>
             )}
@@ -38,7 +39,7 @@ export const Map: React.FC = () => {
                 maxWidth: '100%',
             }}>
                 <div>
-                    <Title level={2} style={{ textAlign: 'center' }}>
+                    <Title level={2} style={{ textAlign: 'center', color: 'white' }}>
                         Карта идей и предложений
                     </Title>
                 </div>

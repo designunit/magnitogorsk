@@ -29,7 +29,6 @@ const App: AppType = ({ Component, pageProps }) => {
                 <PrismicProvider
                     internalLinkComponent={internalLinkComponent}
                 >
-
                     <PrismicPreview repositoryName={repositoryName}>
                         <Component {...pageProps} />
                     </PrismicPreview>

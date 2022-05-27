@@ -5,22 +5,22 @@ import React, { useContext } from 'react'
 import { ConfigContext } from 'src/context/config'
 import { SectionParalaxedBack } from '../SectionParalaxedBack'
 import Image from 'next/image'
-import { PrismicRichText } from '@prismicio/react'
 import gerb from '/public/static/maingerb.svg'
+import hero from '/public/static/hero.jpg'
+import classNames from 'classnames'
 
-export const Hero: React.FC<any> = ({ data, openModal }) => {
+export const Hero: React.FC<any> = ({ openModal }) => {
     const { mapUrl } = useContext(ConfigContext)
     return (
         <SectionParalaxedBack
             back={(
                 <Image
-                    src={data.image?.url ?? '/static/unit.jpg'}
-                    {...data.image?.dimensions ?? { width: 1590, height: 307 }}
-                    alt={data.image?.alt ?? ''}
+                    src={hero}
                     layout='fill'
                     objectFit='cover'
                     priority
                     loading='eager'
+                    quality={100}
                 />
             )}
             contentStyle={{
@@ -29,28 +29,36 @@ export const Hero: React.FC<any> = ({ data, openModal }) => {
             }}
         >
             <div className={s.top}>
-                <div className={`${s.titleLine}`}>
+                <div className={s.titleLine}>
                     <Title>
-                        Комплексное аналитическое исследование<br />
+                        Мастер-план развития Менделеевска
                         <span style={{
-                            fontSize: '.6em',
-                            lineHeight: '.5em'
+                            fontSize: '1.25em',
+                            lineHeight: '1.25em'
                         }}>
-                            Ульяновска и Ульяновско-Димитровградской агломерации
                         </span>
                     </Title>
                 </div>
-                {/* <div>
-                    <Image
-                        src={gerb}
-                    />
-                </div> */}
             </div>
 
             <span className={s.heroSubtitle}>
-                <p className={`${s.description} ${s.blackBg}`}>
-                    <PrismicRichText field={data.description} />
-                </p>
+                <div className={s.description}>
+                    <p>
+                        Приветствуем вас на сайте, посвящённом разработке мастер-плана развития города Менделеевска.
+                    </p>
+                    <p>
+                        Это платформа для обсуждения вместе с горожанами, экспертами, предпринимателями, представителями культурных и образовательных учреждений как развивать Менделеевск.
+                    </p>
+                    <p>
+                        Мастер-план развития города Менделеевска – это документ стратегического планирования территории, разрабатываемый на стыке социально-экономического развития и пространственного.
+                    </p>
+                    <p>
+                        Чем больше жителей Менделеевска предложит свои идеи и предложения по улучшению жизни в своем городе, или, наоборот, озвучит его актуальные проблемы – тем более реализуемым и полезным для каждого жителя получится итоговый документ.
+                    </p>
+                    <p>
+                        Если вы хотите сделать свой город лучше, расскажите, что вы хотите изменить? Потратьте всего пару минут, заполните анкету и отметьте на карте Менделеевска то, что вас волнует и беспокоит.
+                    </p>
+                </div>
             </span>
 
             <div className={s.heroButtons}>

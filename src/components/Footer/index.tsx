@@ -1,34 +1,32 @@
 import s from './styles.module.css'
-import { Button } from '../Button'
 import Image from 'next/image'
-import oblast from '/public/static/Герб_Ульяновской_области_(2013).svg'
 import urbanika from '/public/static/urbanika.svg'
-import centr from '/public/static/centr.svg'
-import unit from '/public/static/unit.jpg'
+import unit from '/public/static/unit.svg'
+import tatrstan from '/public/static/tatrstan.svg'
+import mendeleevsk from '/public/static/mendeleevsk.png'
 
-export const Footer: React.SFC = props => {
 
+export const Footer: React.FC = props => {
     return (
         <footer className={s.footer}>
             <div className={s.items}>
                 <div className={s.item}>
                     <Image
-                        src={oblast}
+                        src={tatrstan}
                         objectFit='contain'
                     />
                     <div className={s.text}>
-                        Губернатор и Правительство<br />
-                        Ульяновской области
+                        Республика Татарстан
                     </div>
                 </div>
                 <div className={s.item}>
                     <Image
-                        src={oblast}
+                        src={mendeleevsk}
                         objectFit='contain'
                     />
                     <div className={s.text}>
-                        Центр стратегических исследований<br />
-                        Ульяновской области
+                        ИСПОЛНИТЕЛЬНЫЙ КОМИТЕТ <br />
+                        МЕНДЕЛЕЕВСКОГО МУНИЦИПАЛЬНОГО РАЙОНА
                     </div>
                 </div>
                 <div className={s.item}>
@@ -38,16 +36,6 @@ export const Footer: React.SFC = props => {
                     />
                     <div className={s.text}>
                         Институт территориального планирования
-                    </div>
-                </div>
-                <div className={s.item}>
-                    <Image
-                        src={centr}
-                        objectFit='contain'
-                    />
-                    <div className={s.text}>
-                        «Центр стратегических разработок<br />
-                         «Северо-Запад»
                     </div>
                 </div>
                 <div className={s.item}>

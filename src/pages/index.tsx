@@ -8,14 +8,13 @@ import React, { useState } from 'react'
 import { Modal } from 'src/components/Modal'
 import { createClient } from 'prismicio'
 import { News } from 'src/components/News'
+import { Timeline } from 'src/components/Timeline'
 
 interface PageProps {
-    newsData: any
-    heroData: any
-    pollData: any
+    newsData: any[]
 }
 
-const Index: NextPage<PageProps> = ({ newsData, heroData, pollData }) => {
+const Index: NextPage<PageProps> = ({ newsData }) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
@@ -27,16 +26,16 @@ const Index: NextPage<PageProps> = ({ newsData, heroData, pollData }) => {
                 <Modal
                     modalIsOpen={modalIsOpen}
                     setModalIsOpen={setModalIsOpen}
-                    data={pollData.data}
                 />
 
                 <Hero
-                    data={heroData.data}
                     openModal={() => setModalIsOpen(true)}
                 />
 
+                <Timeline />
+
                 <span id='news' />
-                <News data={newsData.data.slices} />
+                <News data={newsData} />
 
                 <span id='map' />
                 <Map />
@@ -51,14 +50,10 @@ const Index: NextPage<PageProps> = ({ newsData, heroData, pollData }) => {
 export const getStaticProps = async ({ previewData }) => {
     const client = createClient({ previewData })
     const newsData = await client.getSingle('news')
-    const heroData = await client.getSingle('hero')
-    const pollData = await client.getSingle('poll')
 
     return {
         props: {
-            newsData,
-            heroData,
-            pollData,
+            newsData: newsData.data.slices,
         }
     }
 }

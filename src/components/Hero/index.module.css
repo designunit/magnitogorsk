@@ -9,8 +9,8 @@
 .titleLine h1 {
     margin: 0;
     text-align: left;
-    color: #525252;
-    text-shadow:
+    color: white;
+    /* text-shadow:
         -1px -1px 0 white,
         0 -1px 0 white,
         1px -1px 0 white,
@@ -18,7 +18,7 @@
         1px 1px 0 white,
         0 1px 0 white,
         -1px 1px 0 white,
-        -1px 0 0 white;
+        -1px 0 0 white; */
 }
 
 .blackBg {
@@ -28,13 +28,16 @@
 .description {
     color: var(--color-text);
     max-width: 45rem;
-    padding: 2rem;
-    padding-bottom: .25rem;
     color: white;
+    padding-bottom: 2rem;
 }
 
 .description>p {
     margin-top: 0;
+}
+
+.description>p:last-child {
+    margin-bottom: 0;
 }
 
 .content {
@@ -47,7 +50,7 @@
 }
 
 .buttonsSpacer {
-    width: 36px;
+    width: 1rem;
 }
 
 .form {
@@ -76,7 +79,7 @@
 
     .heroButtons {
         width: 100%;
-        padding: 64px 10% 64px 10%;
+        padding: 64px 2rem;
         flex-wrap: wrap;
     }
 
