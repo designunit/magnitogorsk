@@ -1,6 +1,7 @@
 import { SectionParalaxedBack } from '../SectionParalaxedBack'
 import s from './styles.module.css'
 import { Title } from '../Title'
+import Image from 'next/image'
 
 const data = [
     {
@@ -37,10 +38,16 @@ export const Timeline = () => {
                 }}
                 back={(
                     <>
-                        <div style={{
+                        <Image
+                            src='/static/timeline.jpg'
+                            layout='fill'
+                            objectFit='cover'
+                            quality={90}
+                        />
+                        {/* <div style={{
                             height: '100%',
                             background: '#D04E29',
-                        }} />
+                        }} /> */}
                     </>
                 )}
             >

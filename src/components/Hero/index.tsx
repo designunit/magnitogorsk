@@ -42,7 +42,7 @@ export const Hero: React.FC<any> = ({ openModal }) => {
             </div>
 
             <span className={s.heroSubtitle}>
-                <div className={s.description}>
+                <div className={classNames(s.blackBg, s.description)}>
                     <p>
                         Приветствуем вас на сайте, посвящённом разработке мастер-плана развития города Менделеевска.
                     </p>

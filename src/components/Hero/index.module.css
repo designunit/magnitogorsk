@@ -9,7 +9,7 @@
 .titleLine h1 {
     margin: 0;
     text-align: left;
-    color: white;
+    color: var(--color-button);
     /* text-shadow:
         -1px -1px 0 white,
         0 -1px 0 white,
@@ -23,6 +23,7 @@
 
 .blackBg {
     background-color: rgba(0, 0, 0, .5);
+    padding: 1rem;
 }
 
 .description {
