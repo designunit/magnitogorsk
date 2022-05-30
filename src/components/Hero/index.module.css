@@ -22,14 +22,14 @@
 }
 
 .blackBg {
-    background-color: rgba(0, 0, 0, .5);
-    padding: 1rem;
+    /* background-color: rgba(0, 0, 0, .5); */
+    /* padding: 1rem; */
 }
 
 .description {
     color: var(--color-text);
-    max-width: 45rem;
-    color: white;
+    max-width: 40rem;
+    color: black;
     padding-bottom: 2rem;
 }
 

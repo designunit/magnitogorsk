@@ -31,12 +31,8 @@ export const Hero: React.FC<any> = ({ openModal }) => {
             <div className={s.top}>
                 <div className={s.titleLine}>
                     <Title>
-                        Мастер-план развития Менделеевска
-                        <span style={{
-                            fontSize: '1.25em',
-                            lineHeight: '1.25em'
-                        }}>
-                        </span>
+                        Мастер-план развития<br />
+                        Менделеевска
                     </Title>
                 </div>
             </div>
