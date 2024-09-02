@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build-timeweb": "next build && next export",
     "start": "next start",
     "sm": "start-slicemachine",
     "slicemachine": "start-slicemachine"
@@ -17,7 +18,7 @@
     "@prismicio/slice-simulator-react": "^0.2.2",
     "@types/react-burger-menu": "^2.6.1",
     "classnames": "^2.2.6",
-    "next": "^12.1.5",
+    "next": "^12.3.0",
     "next-seo": "^5.4.0",
     "query-string": "^6.13.7",
     "react": "17.0.2",
