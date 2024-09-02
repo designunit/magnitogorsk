@@ -1,0 +1,8 @@
+{
+    "name": "mendeleevsk",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "echo 'timeweb are using npm i on build stage instead of npm ci ¯\\_(ツ)_/¯ so here is noting to build just take output from the repo'"
+    }
+}
